@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace AdventOfCodeDay16
+namespace AdventOfCodeDay01
 {
     class Program
     {
