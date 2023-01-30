@@ -28,7 +28,28 @@ namespace AdventOfCodeDay01
 
             Console.WriteLine($"The answer of part 1 is: { answer1 }");
 
-            
+            foreach (var textRow in input)
+            {
+                List<int> assignmentTexts = textRow.Split(',', '-').Select(int.Parse).ToList();
+
+                if (assignmentTexts[0] >= assignmentTexts[2] && assignmentTexts[1] <= assignmentTexts[3])
+                {
+                    answer2++;
+                }
+                else if (assignmentTexts[2] >= assignmentTexts[0] && assignmentTexts[3] <= assignmentTexts[1])
+                {
+                    answer2++;
+                }
+                else if (assignmentTexts[1] >= assignmentTexts[2] && assignmentTexts[3] >= assignmentTexts[0])
+                {
+                    answer2++;
+                }
+                else if (assignmentTexts[2] >= assignmentTexts[1] && assignmentTexts[0] >= assignmentTexts[3])
+                {
+                    answer2++;
+                }
+            }
+
 
             Console.WriteLine($"The answer of part 2 is: { answer2 }");
         }
